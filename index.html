@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="navbar-title">
-            <h1>Career Guide</h1>
+            <h1>Sign Language</h1>
         </div>
         <div class="navbar-links">
             <a href="#home">Home</a>
@@ -22,61 +23,75 @@
     </nav>
 
     <div class="Container">
+        <div class="textOverlay">
+            <p>Breaking Barriers, </p>
+            <p>One Sign at a Time </p>
+        </div>
         <div class="imgSlider"></div>
     </div>
+    
 
-    <section class="content" id="home">
-        <div class="intro">
-            <h2>Welcome to Career Guide</h2>
-            <p>Your journey to a fulfilling career starts here! Whether you're a student looking to explore career options, a recent graduate seeking guidance, or a professional considering a career change, we are here to help you make informed decisions.</p>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <h1>Empowering Communication through Sign Language</h1>
+        <p>Our app helps users who can't speak communicate effectively through sign language. Join us in making communication accessible to everyone.</p>
+        <button onclick="window.location.href='#features'">Get Started</button>
+    </section>
 
-            <button onclick="window.location.href='#about'"> <span>Learn More</span>
-            </button>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Key Features</h2>
+        <div class="feature-item">
+            <img src="random.jpg" alt="Real-Time Translation">
+            <h3>Real-Time Translation</h3>
+            <p>Communicate effortlessly with our real-time sign language translation feature.</p>
+        </div>
+        <div class="feature-item">
+            <img src="random.jpg" alt="Tutorials">
+            <h3>Tutorials</h3>
+            <p>Learn sign language with our step-by-step tutorials designed for all skill levels.</p>
+        </div>
+        <div class="feature-item">
+            <img src="random.jpg" alt="Video Calls">
+            <h3>Video Calls</h3>
+            <p>Connect with others using sign language in our integrated video call platform.</p>
         </div>
     </section>
 
-    <section class="services">
-        <a href="career_exploration.html" class="service-item">
-            <img src="https://gotoltc.edu/sites/default/files/2022-06/collageprofessions_diverse.jpg" width="400" alt="Career Exploration">
-            <h3>Career Exploration</h3>
-            <p>Discover a wide range of career options tailored to your skills, interests, and passions.</p>
-        </a>
-        <a href="counseling.html" class="service-item">
-            <img src="https://bcdn.mindler.com/bloglive/wp-content/uploads/2022/01/19163640/blog-37-770x385.png" width="400" alt="Counseling">
-            <h3>Counseling</h3>
-            <p>Get personalized advice and support from our experienced career counselors.</p>
-        </a>
-        <a href="resources.html" class="service-item">
-            <img src="https://doloresschools.org/wp-content/uploads/2019/08/resources-1-1.jpg" width="400" alt="Resources">
-            <h3>Resources</h3>
-            <p>Access a wealth of resources including articles, tools, and guides to help you succeed.</p>
-        </a>
-        <a href="about_us.html" class="service-item">
-            <img src="https://fendco.net/hubfs/about%20us.jpg" width="400" alt="About Us">
-            <h3>About Us</h3>
-            <p>Learn more about our mission, values, and the team behind Career Guide.</p>
-        </a>
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <h2>How It Works</h2>
+        <p>Start using our app in just a few simple steps. Sign up, choose your preferences, and begin communicating with ease using sign language.</p>
     </section>
 
-    <section class="content" id="about">
-        <div class="about">
-            <h2>About Us</h2>
-            <p>At Career Guide, we believe in empowering individuals to achieve their career goals. Our platform offers comprehensive resources, including expert advice, career assessments, and tools to help you discover the right career path. We provide personalized guidance to ensure you make the best career choices.</p>
-            <p>Our team of career counselors and industry experts work together to bring you the most up-to-date information and strategies to succeed in your chosen field. We are committed to helping you navigate your career journey with confidence.</p>
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>User Stories</h2>
+        <div class="testimonial-item">
+            <img src="user1.jpg" alt="User 1">
+            <p>"This app has completely changed the way I communicate. It's intuitive and easy to use!" - Sarah M.</p>
+        </div>
+        <div class="testimonial-item">
+            <img src="user2.jpg" alt="User 2">
+            <p>"I can now talk to my friends and family effortlessly. This app is a game-changer!" - John D.</p>
         </div>
     </section>
 
-    <section class="content" id="contact">
-        <div class="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions or need personalized career advice? We're here to help! Reach out to us via the following channels:</p>
-            <ul>
-                <li>Email: <a href="mailto:support@careerguide.com">support@careerguide.com</a></li>
-                <li>Phone: +1 (800) 123-4567</li>
-                <li>Address: 123 Career Lane, Success City, SC 12345</li>
-            </ul>
-        </div>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need support? We're here to help. Reach out to us via the following channels:</p>
+        <ul>
+            <li>Email: <a href="mailto:support@signlanguageapp.com">support@signlanguageapp.com</a></li>
+            <li>Phone: +1 (800) 123-4567</li>
+            <li>Address: 123 Sign Language Lane, Communication City, CL 12345</li>
+        </ul>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sign Language Web App. All rights reserved.</p>
+    </footer>
 
 </body>
 

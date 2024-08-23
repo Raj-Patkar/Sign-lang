@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 body {
@@ -43,6 +47,7 @@ body {
 .Container {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .imgSlider {
@@ -55,6 +60,28 @@ body {
     animation: ChangImage 20s linear infinite;
     display: grid;
     place-items: center;
+}
+
+.textOverlay {
+    position: absolute;
+    top: 200px; /* Adjust this value to control vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    padding: 10px 20px;
+   
+    z-index: 10; /* Ensures the text stays above the slider */
+}
+
+.textOverlay p {
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    font-family: "New Amsterdam", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 @keyframes ChangImage {
@@ -199,7 +226,7 @@ button::after {
 
 button::before {
     content: "";
-    background: #000;
+    background: #de3f3f;
     width: 120%;
     left: -10%;
     transform: skew(30deg);
@@ -209,3 +236,167 @@ button::before {
 button:hover::before {
     transform: translate3d(100%, 0, 0);
 }
+
+
+        /* Hero Section */
+        .hero {
+            background: url('your-hero-image.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color:#000  
+        }
+
+        
+        
+
+        /* Features Section */
+        .features {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .features .feature-item {
+            display: inline-block;
+            width: 250px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .features .feature-item img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .features .feature-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff9900;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .how-it-works p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #555;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .testimonials .testimonial-item {
+            display: inline-block;
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonials .testimonial-item img {
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .testimonials .testimonial-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: #555;
+        }
+
+        .contact ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact ul li {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .contact ul li a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #000000;
+            color: white;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
