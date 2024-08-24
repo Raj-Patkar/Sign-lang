@@ -400,3 +400,41 @@ button:hover::before {
             font-size: 14px;
         }
 
+
+        /* Conversion Tools Section */
+.conversion-tools {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.conversion-item {
+    display: block;
+    text-align: center;
+    width: 45%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.conversion-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.conversion-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.conversion-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff9900;
+}
