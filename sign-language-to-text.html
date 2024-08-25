@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language to Text</title>
+    <link rel="stylesheet" href="styles_convertor.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-title">
+                <h1>Sign Language Web App</h1>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="text-to-sign-language.html">Text to Sign Language</a>
+                <a href="sign-language-to-text.html">Sign Language to Text</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="conversion-page">
+        <h2>Sign Language to Text</h2>
+        <p>Convert sign language gestures into text. Use your device’s camera to get started:</p>
+        <div id="camera-feed">
+            <!-- Camera feed will be displayed here -->
+        </div>
+        <button id="start-conversion">Start Conversion</button>
+        <div id="text-output">
+            <!-- Output of the text conversion will appear here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sign Language Web App. All rights reserved.</p>
+    </footer>
+
+    <script src="sign-language-to-text.js"></script>
+</body>
+</html>

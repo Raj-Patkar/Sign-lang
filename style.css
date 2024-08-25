@@ -184,58 +184,31 @@ body {
     transform: scale(1.05);
 }
 
-/* Button styling */
-button {
-    outline: none;
-    cursor: pointer;
+/* From Uiverse.io by mrhyddenn */ 
+.shadow__btn {
+    padding: 10px 20px;
     border: none;
-    padding: 0.9rem 2rem;
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    position: relative;
-    display: inline-block;
-    letter-spacing: 0.05rem;
-    font-weight: 700;
     font-size: 17px;
-    border-radius: 500px;
-    overflow: hidden;
-    background: #66ff66;
-    color: ghostwhite;
-}
-
-button span {
-    position: relative;
-    z-index: 10;
-    transition: color 0.4s;
-}
-
-button:hover span {
-    color: black;
-}
-
-button::before,
-button::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-button::before {
-    content: "";
-    background: #de3f3f;
-    width: 120%;
-    left: -10%;
-    transform: skew(30deg);
-    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-}
-
-button:hover::before {
-    transform: translate3d(100%, 0, 0);
-}
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+  }
+  
+  .shadow__btn {
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+  }
+  
+  .shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+  }
 
 
         /* Hero Section */
@@ -356,7 +329,12 @@ button:hover::before {
             padding: 60px 20px;
             text-align: center;
             background-color: #fff;
+            max-width: 800px; /* Set a max width for the section */
+            margin: 0 auto; /* Center the section horizontally */
+            border-radius: 8px; /* Optional: add rounded corners for a better look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
         }
+        
 
         .contact h2 {
             font-size: 36px;
@@ -409,6 +387,10 @@ button:hover::before {
     background-color: #ffffff;
 }
 
+.conversion-tools a{
+    background-color: #c0bfbf;
+}
+
 .conversion-item {
     display: block;
     text-align: center;
@@ -436,5 +418,5 @@ button:hover::before {
 .conversion-item h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #ff9900;
+    color: #000000;
 }
