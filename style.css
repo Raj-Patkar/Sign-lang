@@ -422,6 +422,51 @@ body {
             margin-bottom: 10px;
             color: #000000;
         }
+
+        .center-container {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            margin-top: 20px; /* Add some top margin */
+        }
+        
+        h2 {
+            text-align: center; /* Center the heading */
+            margin-bottom: 20px; /* Add some space below the heading */
+        }
+        
+        .center-container {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            margin-top: 20px; /* Add some top margin */
+        }
+        
+        .download-section {
+            padding: 20px;
+            border: 2px solid  #ff9900; 
+            border-radius: 10px;
+            text-align: center; /* Center align the text */
+            background-color: #f0f8ff; /* Light background color */
+            width: fit-content; /* Box fits the content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+            margin: 0 auto; /* Center the section itself */
+        }
+        
+        .download-section a {
+            text-decoration: none; /* Remove underline */
+            color: #fff; /* Text color */
+            background-color:  #ff9900;/* Button color */
+            padding: 10px 20px; /* Padding for the button */
+            border-radius: 5px; /* Rounded corners for the button */
+            font-weight: bold; /* Bold text */
+            display: inline-block; /* Make the link like a button */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+        
+        .download-section a:hover {
+            background-color:  #b97004; /* Darker shade on hover */
+        }
+        
+        
         
         /* Media Query for screens less than 768px wide (Tablets and Mobile devices) */
         @media screen and (max-width: 768px) {
