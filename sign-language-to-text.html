@@ -1,40 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Language to Text</title>
+    <title>ISL Web App Interface</title>
     <link rel="stylesheet" href="styles_convertor.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            
-            <div class="navbar-links">
-                <a href="index.html">Home</a>
-                <a href="text-to-sign-language.html">Text to Sign Language</a>
-                <a href="sign-language-to-text.html">Sign Language to Text</a>
-                <a href="contact.html">Contact</a>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>ISL</h1>
+                <button class="search-button">Search</button>
             </div>
-        </nav>
-    </header>
-
-    <main class="conversion-page">
-        <h2>Sign Language to Text</h2>
-        <p>Convert sign language gestures into text. Use your device’s camera to get started:</p>
-        <div id="camera-feed">
-            <!-- Camera feed will be displayed here -->
+            <ul class="sidebar-menu">
+                <li class="menu-item active">Home</li>
+                <li class="menu-item">Transcriptions</li>
+                <li class="menu-item">Learn</li>
+                <li class="menu-item">Help</li>
+            </ul>
+            <ul class="sidebar-footer">
+                <li class="menu-item">Lab</li>
+                <li class="menu-item">Settings</li>
+            </ul>
         </div>
-        <button id="start-conversion">Start Conversion</button>
-        <div id="text-output">
-            <!-- Output of the text conversion will appear here -->
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>Home</h2>
+            <div class="action-cards">
+                <div class="card">
+                    <h3>Stream from Webcam</h3>
+                    <p>Capture real-time gestures using your webcam and start recognizing instantly</p>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none" class="svg-icon"><g stroke-width="2" stroke-linecap="round" stroke="#fff" fill-rule="evenodd" clip-rule="evenodd"><path d="m4 9c0-1.10457.89543-2 2-2h2l.44721-.89443c.33879-.67757 1.03131-1.10557 1.78889-1.10557h3.5278c.7576 0 1.4501.428 1.7889 1.10557l.4472.89443h2c1.1046 0 2 .89543 2 2v8c0 1.1046-.8954 2-2 2h-12c-1.10457 0-2-.8954-2-2z"></path><path d="m15 13c0 1.6569-1.3431 3-3 3s-3-1.3431-3-3 1.3431-3 3-3 3 1.3431 3 3z"></path></g></svg>
+
+                        open webcam
+                    </button>
+                </div>
+                <div class="card">
+                    <h3>Upload a file</h3>
+                    <p>Upload a video to analyze gestures from your files.</p>
+                   
+                    <button>
+                        <svg aria-hidden="true" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-width="2" stroke="#fffffff"
+                                d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125"
+                                stroke-linejoin="round" stroke-linecap="round"></path>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#fffffff"
+                                d="M17 15V18M17 21V18M17 18H14M17 18H20"></path>
+                        </svg>
+                        Upload File
+                    </button>
+
+                </div>
+            </div>
+            <div class="recent-transcriptions">
+                <h3>Recent Transcriptions</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Transcription</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Example Title 1</td>
+                            <td>Type A</td>
+                            <td>Example transcription text 1</td>
+                        </tr>
+                        <tr>
+                            <td>Example Title 2</td>
+                            <td>Type B</td>
+                            <td>Example transcription text 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Sign Language Web App. All rights reserved.</p>
-    </footer>
-
-    <script src="sign-language-to-text.js"></script>
+    </div>
 </body>
+
 </html>

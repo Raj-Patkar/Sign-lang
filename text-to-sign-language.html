@@ -1,40 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to Sign Language</title>
+    <title>ISL Web App Interface</title>
     <link rel="stylesheet" href="styles_convertor.css">
+    <style>
+        /* Styling for the Action Cards Container */
+.action-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styling for Each Card */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header in Card */
+.card h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph in Card */
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form Styling */
+#text-to-sign-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #488aec;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1f71ec;
+}
+
+/* Styling for Output Area */
+#sign-language-output {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+#sign-language-output p {
+    margin: 0;
+    font-size: 16px;
+}
+
+    </style>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-                
-            <div class="navbar-links">
-                <a href="index.html">Home</a>
-                <a href="text-to-sign-language.html">Text to Sign Language</a>
-                <a href="sign-language-to-text.html">Sign Language to Text</a>
-                <a href="contact.html">Contact</a>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>ISL</h1>
+                <button class="search-button">Search</button>
             </div>
-        </nav>
-    </header>
-
-    <main class="conversion-page">
-        <h2>Text to Sign Language</h2>
-        <p>Convert any text into sign language. Enter your text below to get started:</p>
-        <form id="text-to-sign-form">
-            <textarea placeholder="Enter your text here..." rows="6"></textarea>
-            <button type="submit">Convert</button>
-        </form>
-        <div id="sign-language-output">
-            <!-- Output of the sign language conversion will appear here -->
+            <ul class="sidebar-menu">
+                <li class="menu-item active">Home</li>
+                <li class="menu-item">Transcriptions</li>
+                <li class="menu-item">Learn</li>
+                <li class="menu-item">Help</li>
+            </ul>
+            <ul class="sidebar-footer">
+                <li class="menu-item">Lab</li>
+                <li class="menu-item">Settings</li>
+            </ul>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Sign Language Web App. All rights reserved.</p>
-    </footer>
-
-    <script src="text-to-sign-language.js"></script>
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>Home</h2>
+            <div class="action-cards">
+                <div class="card">
+                    
+                        <h2>Text to Sign Language</h2>
+                        <p>Convert any text into sign language. Enter your text below to get started:</p>
+                        <form id="text-to-sign-form">
+                            <textarea placeholder="Enter your text here..." rows="6"></textarea>
+                            <button type="submit">Convert</button>
+                        </form>
+                        <div id="sign-language-output">
+                            <!-- Output of the sign language conversion will appear here -->
+                        </div>
+                   
+                </div>
+                
+                </div>
+            </div>
+           
+        </div>
+    </div>
 </body>
+
 </html>

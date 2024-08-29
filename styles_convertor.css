@@ -1,148 +1,377 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-}
-
-header {
-    background-color: #000000;
-    color: white;
-    padding: 10px 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.navbar-title h1 {
     margin: 0;
-    font-size: 24px;
+    font-family: Arial, sans-serif;
+
+    background-size: cover;
 }
 
-.navbar-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 40px;
-    font-size: 16px;
-    transition: color 0.3s ease;
+.container {
+    display: flex;
+    height: 100vh;
+   
+    background-color: rgba(243, 243, 243, 0.1);
+    /* Transparent overlay */
 }
 
-.navbar-links a:hover {
-    color: #ffdd57;
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: rgb(36, 34, 34);
+    /* Semi-transparent sidebar */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    
+
 }
 
-/* Media Query for screens less than 768px wide (Tablets and Mobile devices) */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-  
-
-    .navbar-links {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-links a {
-        margin-left: 0;
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-}
-
-
-/* Conversion Page Styling */
-.conversion-page {
-    max-width: 800px;
-    margin: 20px auto;
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
 }
 
-.conversion-page h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.conversion-page p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    resize: vertical;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+.search-button {
+    background-color: rgba(255, 255, 255, 0.2);
     border: none;
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+.sidebar-menu,
+.sidebar-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between  ;
 }
 
-#sign-language-output, #text-output {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.menu-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Transparent effect */
+    overflow-y: auto;
+}
+
+.action-cards {
+    display: flex;
+    height: 562px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 24px;
+    background: var(--Views-Recessed-Material-View, linear-gradient(0deg, rgba(208, 208, 208, 0.50) 0%, rgba(208, 208, 208, 0.50) 100%), rgba(0, 0, 0, 0.10));
+    background-blend-mode: color-burn, luminosity;
+
+    /* Recessed */
+    box-shadow: 0px -0.5px 1px 0px rgba(255, 255, 255, 0.30) inset, 0px -0.5px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 1.5px 4px 0px rgba(0, 0, 0, 0.08) inset, 0px 1.5px 4px 0px rgba(0, 0, 0, 0.10) inset;
+}
+
+.card {
+    display: flex;
+    height: 522px;
+    padding: 0px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    flex: 1 0 0;
+    border-radius: 20px;
+    border: 0.5px solid var(--LinearBorder, rgba(255, 255, 255, 0.40));
+    background: white;
+    background-blend-mode: color-dodge, lighten;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.card h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;  
+    color: var(--Text-Primary, rgba(2, 2, 2, 0.96));
     text-align: center;
-    font-size: 18px;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-overflow: ellipsis;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+
 }
 
-/* Camera Feed for Sign Language to Text Page */
-#camera-feed {
-    width: 100%;
-    height: 400px;
-    background-color: #d3d3d3;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.card p {
+    width: 444px;
+    color: #000000;
+
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 150% */
+}
+
+/* From Uiverse.io by SpatexDEV */ 
+button {
+    border: none;
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    background-color: #488aec;
+    color: #ffffff;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    user-select: none;
+    gap: 0.75rem;
+    box-shadow:
+      0 4px 6px -1px #488aec31,
+      0 2px 4px -1px #488aec17;
+    transition: all 0.6s ease;
+  }
+  
+  button:hover {
+    box-shadow:
+      0 10px 15px -3px #488aec4f,
+      0 4px 6px -2px #488aec17;
+  }
+  
+  button:focus,
+  button:active {
+    opacity: 0.85;
+    box-shadow: none;
+  }
+  
+  button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  
+  /* From Uiverse.io by andrew-demchenk0 */ 
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #666;
-    font-size: 18px;
+    padding: 9px 12px;
+    gap: 8px;
+    height: 40px;
+    width: 172px;
+    border: none;
+    background: #488aec;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .lable {
+    line-height: 22px;
+    font-size: 10px;
+    color: #fff;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .button:hover {
+    background: #1f71ec;
+  }
+  
+
+  
+  @keyframes flickering {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    52% {
+      opacity: 1;
+    }
+  
+    54% {
+      opacity: 0;
+    }
+  
+    56% {
+      opacity: 1;
+    }
+  
+    90% {
+      opacity: 1;
+    }
+  
+    92% {
+      opacity: 0;
+    }
+  
+    94% {
+      opacity: 1;
+    }
+  
+    96% {
+      opacity: 0;
+    }
+  
+    98% {
+      opacity: 1;
+    }
+  
+    99% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+.recent-transcriptions {
+    margin-top: 20px;
+    padding: 20px; /* Increased padding for better layout */
+    border-radius: 24px;
+    background: linear-gradient(0deg, rgba(208, 208, 208, 0.50) 0%, rgba(208, 208, 208, 0.50) 100%), rgba(0, 0, 0, 0.10);
+    background-blend-mode: color-burn, luminosity;
+    box-shadow: 0px -0.5px 1px 0px rgba(255, 255, 255, 0.30), 0px -0.5px 1px 0px rgba(255, 255, 255, 0.25), 0px 1.5px 4px 0px rgba(0, 0, 0, 0.08), 0px 1.5px 4px 0px rgba(0, 0, 0, 0.10);
 }
 
-/* Footer */
-footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
+.recent-transcriptions h3 {
+    margin-bottom: 20px;
+    color: rgb(58, 58, 58); /* Ensures the text color is visible */
+    font-size: 18px; /* Adjusted font size */
+}
+
+table {
+    width: 100%; /* Use full width */
+    border-collapse: collapse; /* Makes sure there’s no spacing between cells */
+    border-radius: 20px;
+    background: white;
+    background-blend-mode: color-dodge, lighten;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    overflow: hidden; /* Rounds the corners for table */
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for header */
+    padding: 15px;
+    text-align: left;
+    color: rgb(0, 0, 0); /* Ensure text color is visible */
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Divider line */
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    color: rgb(0, 0, 0); /* Text color */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divider line */
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}   
+
+
+
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        height: auto; /* Allow height to grow based on content */
+        max-height: 100vh; /* Prevent exceeding viewport height */
+        overflow: auto; /* Enable scrolling for the container if needed */
+    }
+
+    .sidebar {
+        position: fixed; /* Fix the sidebar to the side */
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%); /* Hide sidebar initially */
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .main-content {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .action-cards {
+        flex-direction: column; /* Stack cards vertically */
+        padding: 10px; /* Adjust padding */
+        gap: 15px; /* Reduce gap between cards */
+    }
+
+    .card {
+        height: auto; /* Allow cards to resize */
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .card h3 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .card p {
+        width: auto; /* Adjust width for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    table {
+        font-size: 14px; /* Adjust table font size for smaller screens */
+    }
+
+    th, td {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .recent-transcriptions {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .recent-transcriptions h3 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    button {
+        padding: 0.5rem 1rem; /* Adjust button padding for smaller screens */
+        font-size: 0.65rem;
+    }
+
+    .button {
+        width: auto; /* Adjust width for smaller screens */
+        padding: 8px 10px; /* Adjust button padding for smaller screens */
+    }
 }
