@@ -14,16 +14,16 @@ body {
 }
 
 /* Sidebar */
-.sidebar {
-    width: 250px;
-    background-color: rgb(36, 34, 34);
-    /* Semi-transparent sidebar */
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    
+  .sidebar {
+      width: 250px;
+      background-color: rgb(36, 34, 34);
+      /* Semi-transparent sidebar */
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      
 
-}
+  }
 
 .sidebar-header {
     display: flex;
@@ -32,14 +32,7 @@ body {
     padding: 20px;
 }
 
-.search-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 
 .sidebar-menu,
 .sidebar-footer {
@@ -314,41 +307,52 @@ tbody tr:last-child td {
         overflow: auto; /* Enable scrolling for the container if needed */
     }
 
+    
     .sidebar {
-        position: fixed; /* Fix the sidebar to the side */
-        width: 100%;
-        height: 100%;
-        transform: translateX(-100%); /* Hide sidebar initially */
-        top: 0;
-        left: 0;
-        transition: transform 0.3s ease-in-out;
+      width: 100%;
+      height: 75px;
+      flex-direction: row;
+      position: relative; /* Navbar style on smaller screens */
+  }
+
+  .sidebar-header {
+      flex-grow: 1;
+  }
+
+  .sidebar-menu, .sidebar-footer {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .menu-item {
+      padding: 10px;
+      margin-top: 17px;
+      margin-bottom: 10px;
+      flex: 1; /* Allows items to spread evenly across the navbar */
+      text-align: center;
+  }
+
+
+    .sidebar-header {
+        flex-grow: 1;
+    }
+
+    .sidebar-menu, .sidebar-footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-item {
+        padding: 10px;
+        flex: 1; /* Allows items to spread evenly across the navbar */
+        text-align: center;
     }
 
     .main-content {
         padding: 20px; /* Adjust padding for smaller screens */
     }
 
-    .action-cards {
-        flex-direction: column; /* Stack cards vertically */
-        padding: 10px; /* Adjust padding */
-        gap: 15px; /* Reduce gap between cards */
-    }
-
-    .card {
-        height: auto; /* Allow cards to resize */
-        padding: 10px;
-        border-radius: 20px;
-    }
-
-    .card h3 {
-        font-size: 24px; /* Adjust font size for smaller screens */
-    }
-
-    .card p {
-        width: auto; /* Adjust width for smaller screens */
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
-
+   
     table {
         font-size: 14px; /* Adjust table font size for smaller screens */
     }
@@ -374,4 +378,49 @@ tbody tr:last-child td {
         width: auto; /* Adjust width for smaller screens */
         padding: 8px 10px; /* Adjust button padding for smaller screens */
     }
+}
+
+
+@media (max-width: 768px) {
+  .action-cards {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: stretch; /* Stretch cards to fit full width */
+  }
+
+  .card {
+      height: 70vh; /* Adjust height for smaller screens */
+      padding: 4vw;
+      padding: 20px;
+  }
+
+  .card h3 {
+      font-size: 1.8rem; /* Adjust font size */
+  }
+
+  .card p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Media query for smaller screens like mobile phones */
+@media (max-width: 480px) {
+  .action-cards {
+      flex-direction: column; /* Ensure cards stack vertically */
+      gap: 10px; /* Adjust gap for very small screens */
+  }
+
+  .card {
+      height: 75vh; /* Further adjust height for small screens */
+      padding: 5vw;
+      width: 100%; /* Ensure full width */
+      padding: 20px;
+  }
+
+  .card h3 {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .card p {
+      font-size: 0.8rem; /* Smaller font size for mobile */
+  }
 }
